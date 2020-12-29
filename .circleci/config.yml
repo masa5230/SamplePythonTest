@@ -7,7 +7,7 @@ executors:
 jobs:
   test:
     executor: my-executor
-      - working_directory: src
+      - working_directory src
     steps: #stepsキーが正しい
       - checkout
       - run: pwd
