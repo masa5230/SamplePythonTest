@@ -3,14 +3,14 @@ executors:
   my-executor:
     docker:
       - image: circleci/python:3.6.4
-      environment:
-        POSTGRES_USER: root
 
 jobs:
   build:
     executor: my-executor
     working_directory: ./src
     steps: #stepsキーが正しい.
+      - persist_to_workspace
+        root: ./src
       - checkout
       - run: pwd
       - run: python HelloWorld.py
