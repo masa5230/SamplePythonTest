@@ -8,7 +8,7 @@ jobs:
   build:
     executor: my-executor
 
-    steps: #stepsキーが正しい
+    steps: #stepsキーが正しい.
       - checkout
       - run: pwd
       - run: python HelloWorld.py
