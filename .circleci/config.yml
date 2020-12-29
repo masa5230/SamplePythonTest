@@ -5,7 +5,7 @@ executors:
       - image: circleci/python:3.6.4
     working_directory: ./src
 jobs:
-  test:
+  build:
     executor: my-executor
 
     steps: #stepsキーが正しい
