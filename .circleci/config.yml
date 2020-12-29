@@ -7,10 +7,7 @@ executors:
 jobs:
   build:
     executor: my-executor
-    working_directory: ./src
     steps: #stepsキーが正しい.
-      - persist_to_workspace
-        root: ./src
       - checkout
       - run: pwd
-      - run: python HelloWorld.py
+      - run: python ./src/HelloWorld.py
