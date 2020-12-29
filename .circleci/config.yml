@@ -3,7 +3,7 @@ executors:
   my-executor:
     docker:
       - image: circleci/python:3.6.4
-    working_directory: ~/src
+    working_directory: ./src
 jobs:
   test:
     executor: my-executor
