@@ -6,4 +6,4 @@ jobs:
     steps: #stepsキーが正しい
       - checkout
       - run: pwd
-      - run: python HelloWorld.py
+      - run: python ./src/HelloWorld.py
