@@ -1,9 +1,13 @@
-version: 2
-jobs:
-  build:
+version: 2.1
+executors:
+  my-executor:
     docker:
       - image: circleci/python:3.6.4
+      - working_directory: src
+jobs:
+  test:
+    executor: my-executor
     steps: #stepsキーが正しい
       - checkout
       - run: pwd
-      - run: python ./src/HelloWorld.py
+      - run: python HelloWorld.py
